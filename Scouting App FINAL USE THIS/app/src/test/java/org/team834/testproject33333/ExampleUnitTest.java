@@ -1,4 +1,4 @@
-package org.team834.scouting;
+package org.team834.testproject33333;
 
 import org.junit.Test;
 

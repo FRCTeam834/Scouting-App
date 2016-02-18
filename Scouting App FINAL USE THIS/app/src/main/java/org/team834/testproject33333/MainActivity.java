@@ -1,13 +1,12 @@
-package org.team834.scouting;
-import android.os.Bundle;
+package org.team834.testproject33333;
+
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -95,10 +94,7 @@ public class MainActivity extends AppCompatActivity {
         EditText comments = (EditText) findViewById(R.id.comments);
         output += teamNum.getText() + ", ";
 
-        generateQRCode(output);
+
     }
 
-    public void generateQRCode(String str) {
-        //BarcodeFormat
-    }
 }
