@@ -2,13 +2,19 @@ package org.team834.testproject33333;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
+
 import android.widget.Spinner;
+import android.content.Intent;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    String output = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Done(View v) {
-        String output = "";
+       // String output = "";
+
         EditText matchNum = (EditText) findViewById(R.id.matchNum);
         output += matchNum.getText() + ", ";
 
@@ -53,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         output += numHighShots.getSelectedItem().toString() + ", ";
 
         Spinner numLowShots = (Spinner) findViewById(R.id.numLowShots);
-        output += numHighShots.getSelectedItem().toString() + ", ";
+        output += numLowShots.getSelectedItem().toString() + ", ";
 
         Spinner mainPurpose = (Spinner) findViewById(R.id.mainPurpose);
         output += mainPurpose.getSelectedItem().toString() + ", ";
@@ -92,9 +99,24 @@ public class MainActivity extends AppCompatActivity {
         output += teeterTotter.isChecked() + ", ";
 
         EditText comments = (EditText) findViewById(R.id.comments);
-        output += teamNum.getText() + ", ";
+        output += comments.getText() + ", ";
 
+        Log.d("output", output);
 
+        //openBarcode();
+        openQRCode();
+    }
+
+    public void openBarcode() {
+        Intent startNewActivity = new Intent(this, Barcode.class);
+        startNewActivity.putExtra("output", output);
+        startActivity(startNewActivity);
+    }
+
+    public void openQRCode() {
+        Intent startQR = new Intent(this, QRCode.class);
+        startQR.putExtra("output", output);
+        startActivity(startQR);
     }
 
 }
