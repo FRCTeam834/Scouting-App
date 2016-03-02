@@ -122,41 +122,37 @@ public class QRCode extends AppCompatActivity {
 
     public void saveImage() {
 
-        //MediaStore.Images.Media.insertImage(getContentResolver(), code, "QRCode", "");
-
+        MediaStore.Images.Media.insertImage(getContentResolver(), code, "QRCode", "");
+        Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
 
         //File sdCardDirectory = Environment.getExternalStorageDirectory();
         //File image = new File(sdCardDirectory, "test.png");
-        File folder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath().toString()+"/QRCodes", "QR #"+".png");
-        if(!folder.exists())
+
+        // Writing to folder (not working)
+        /*File folder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath().toString() + "/QRCodes", "QR #.png");
+        if (!folder.exists())
             folder.mkdirs();
 
 
-        if(folder.exists()){
-            Toast.makeText(getApplicationContext(),"exists",Toast.LENGTH_LONG).show();
-        }else{
+        if (folder.exists()) {
+            Toast.makeText(getApplicationContext(), "exists", Toast.LENGTH_LONG).show();
+        } else {
 
-            Toast.makeText(getApplicationContext()," not exists",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "not exists", Toast.LENGTH_LONG).show();
         }
 
-        FileOutputStream outStream;
         try {
-
-            outStream = new FileOutputStream(folder);
-            code.compress(Bitmap.CompressFormat.PNG, 100, outStream);
-        /* 100 to keep full quality of the image */
-
-            outStream.flush();
-            outStream.close();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+            FileOutputStream out = new FileOutputStream(folder);
+            code.compress(Bitmap.CompressFormat.PNG, 100, out);
+            out.flush();
+            out.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
+        */
 
     }
+
 
 }
 
