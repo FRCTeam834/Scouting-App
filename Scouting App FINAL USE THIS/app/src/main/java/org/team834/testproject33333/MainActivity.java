@@ -120,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
         Intent startQR = new Intent(this, QRCode.class);
         startQR.putExtras(string);
         startActivity(startQR);
+
+        output = "";
     }
 
 }
