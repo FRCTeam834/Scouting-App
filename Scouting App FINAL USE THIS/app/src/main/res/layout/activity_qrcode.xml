@@ -9,11 +9,19 @@
     android:paddingTop="16dp"
     tools:context="org.team834.testproject33333.QRCode">
 
+
     <ImageView
         android:id="@+id/myImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
+
+    <Button
+        android:id="@+id/btn_Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Save"
+        android:onClick="saveImageWrapper"/>
 
 </RelativeLayout>

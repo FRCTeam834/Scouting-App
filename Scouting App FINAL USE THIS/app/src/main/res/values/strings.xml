@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Scouting</string>
     <string name="Done">Done</string>
+    <string name="Save">Save Image</string>
     <string name="Instructions">Enter in the info, then press done and the QR code with the info will be saved</string>
     <string-array name="MainPurpose">
         <item>High Shooter</item>

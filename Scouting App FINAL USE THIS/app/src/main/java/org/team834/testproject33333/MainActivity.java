@@ -114,8 +114,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openQRCode() {
+        Bundle string= new Bundle();
+        string.putString("key", output);
+
         Intent startQR = new Intent(this, QRCode.class);
-        startQR.putExtra("output", output);
+        startQR.putExtras(string);
         startActivity(startQR);
     }
 
