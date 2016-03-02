@@ -12,6 +12,22 @@ import android.widget.Spinner;
 import android.content.Intent;
 
 
+/*
+
+
+DAN README
+
+I used QRJournal1.5 for mac
+
+I used the Text to Columns feature in excel to format it
+
+The APKs for the app are stored in /Scouting App FINAL USE THIS/app/build/outputs
+
+
+
+ */
+
+
 public class MainActivity extends AppCompatActivity {
 
     String output = "";
