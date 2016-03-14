@@ -41,15 +41,20 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        Spinner spinner1 = (Spinner) findViewById(R.id.DriveTrain);
+        /*Spinner spinner1 = (Spinner) findViewById(R.id.DriveTrain);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.DriveTrain, android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter1);
+        spinner1.setAdapter(adapter1);*/
 
-        Spinner spinner2 = (Spinner) findViewById(R.id.numHighShots);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.numHighShots, android.R.layout.simple_spinner_dropdown_item);
+        Spinner spinner2 = (Spinner) findViewById(R.id.numHighShotsAttempted);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.numHighShotsAttempted, android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter2);
+
+        Spinner spinner5 = (Spinner) findViewById(R.id.numHighShotsMade);
+        ArrayAdapter<CharSequence> adapter5 = ArrayAdapter.createFromResource(this, R.array.numHighShotsMade, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner5.setAdapter(adapter5);
 
         Spinner spinner3 = (Spinner) findViewById(R.id.numLowShots);
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.numLowShots, android.R.layout.simple_spinner_dropdown_item);
@@ -60,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter4 = ArrayAdapter.createFromResource(this, R.array.Climb, android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner4.setAdapter(adapter4);
+
+        Spinner spinner6 = (Spinner) findViewById(R.id.ranking);
+        ArrayAdapter<CharSequence> adapter6 = ArrayAdapter.createFromResource(this, R.array.ranking, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner6.setAdapter(adapter6);
 
     }
 
@@ -72,8 +82,11 @@ public class MainActivity extends AppCompatActivity {
         EditText teamNum = (EditText) findViewById(R.id.Team_Number);
         output += teamNum.getText() + ", ";
 
-        Spinner numHighShots = (Spinner) findViewById(R.id.numHighShots);
-        output += numHighShots.getSelectedItem().toString() + ", ";
+        Spinner numHighShotsAttempted = (Spinner) findViewById(R.id.numHighShotsAttempted);
+        output += numHighShotsAttempted.getSelectedItem().toString() + ", ";
+
+        Spinner numHighShotsMade = (Spinner) findViewById(R.id.numHighShotsMade);
+        output += numHighShotsMade.getSelectedItem().toString() + ", ";
 
         Spinner numLowShots = (Spinner) findViewById(R.id.numLowShots);
         output += numLowShots.getSelectedItem().toString() + ", ";
@@ -81,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
         Spinner mainPurpose = (Spinner) findViewById(R.id.mainPurpose);
         output += mainPurpose.getSelectedItem().toString() + ", ";
 
-        Spinner Drive = (Spinner) findViewById(R.id.DriveTrain);
-        output += Drive.getSelectedItem().toString() + ", ";
+        /*Spinner Drive = (Spinner) findViewById(R.id.DriveTrain);
+        output += Drive.getSelectedItem().toString() + ", ";*/
 
         Spinner Climb = (Spinner) findViewById(R.id.Climb);
         output += Climb.getSelectedItem().toString() + ", ";
@@ -113,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox teeterTotter = (CheckBox) findViewById(R.id.df_teeterTotter);
         output += teeterTotter.isChecked() + ", ";
+
+        Spinner ranking = (Spinner) findViewById(R.id.ranking);
+        output += ranking.getSelectedItem().toString() + ", ";
 
         EditText comments = (EditText) findViewById(R.id.comments);
         output += comments.getText() + ", ";

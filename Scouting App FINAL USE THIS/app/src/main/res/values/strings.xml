@@ -6,11 +6,23 @@
     <string-array name="MainPurpose">
         <item>High Shooter</item>
         <item>Low Shooter</item>
-        <item>Defense</item>
+        <item>Crossing Defenses</item>
         <item>Hybrid</item>
     </string-array>
 
-    <string-array name="numHighShots">
+    <string-array name="numHighShotsAttempted">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="numHighShotsMade">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -44,4 +56,19 @@
         <item>No</item>
         <item>Yes</item>
     </string-array>
+
+    <string-array name="ranking">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
 </resources>
